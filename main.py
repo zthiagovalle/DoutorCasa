@@ -3,7 +3,7 @@ import json
 
 class DoutorCasaBot:
   def __init__(self):
-      token = 'colo seu token aqui'
+      token = 'coloque seu token aqui'
       self.url_base = f'https://api.telegram.org/bot{token}/'
       self.risco = int(0)
       self.sequencia = int(0)
@@ -149,7 +149,7 @@ class DoutorCasaBot:
     elif msgUsuario in('OBRIGADO', 'TCHAU', 'ADEUS', 'ATÉ MAIS', 'ATÉ LOGO'):
         self.sequencia = 0
         self.risco = 0
-        return "Fico muito feliz em ter ajudo você, se cuide e fique bem."
+        return "Fico muito feliz em ter ajudado você, se cuide e fique bem."
 
     else:
       self.sequencia = 0
