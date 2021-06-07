@@ -3,7 +3,6 @@ import json
 
 class DoutorCasaBot:
   def __init__(self):
-      token = 'coloque seu token aqui'
       self.url_base = f'https://api.telegram.org/bot{token}/'
       self.risco = int(0)
       self.sequencia = int(0)
@@ -143,6 +142,8 @@ class DoutorCasaBot:
       
       if(self.risco <= 4):
         return "Baseado em suas respostas, é provável que esta situação NÃO se enquadre como caso suspeito de doença pelo coronavírus.\nNo entanto, isto não se trata de diagnóstico.\nMantenha as condutas de precaução e prevenção."
+      elif(self.risco > 4 and self.risco < 8):
+        return "Baseado em suas respostas, é provável que esta situação se enquadre como caso suspeito de doença pelo coronavírus.\nProcure uma unidade de saude mais proxima e faça um teste."
       else:
         return 'Va urgente para um hospital.'
     
